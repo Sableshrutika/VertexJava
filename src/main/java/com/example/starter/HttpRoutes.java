@@ -1,5 +1,6 @@
 package com.example.starter;
 import com.example.starter.Controller.AddEmployee;
+import com.example.starter.Controller.DeleteByIdController;
 import com.example.starter.Controller.GetAllEmployeController;
 import com.example.starter.Controller.GetEmployeeById;
 import com.example.starter.External.Controller.GetAllProduct;
@@ -59,6 +60,7 @@ logger.error("Exception:{}",e);
   router.get("/employee").handler(GetAllEmployeController.INSTANCE::handle);
   router.get("/getProduct").handler(GetAllProduct.INSTANCE::handle);
   router.get("/employee/:employeeId").handler(GetEmployeeById.Instance::handle);
+  router.delete("/employee/delete/:employeeId").handler(DeleteByIdController.INSTANCE::handle);
   }
   private int getProcessors() {
     return Math.max(1, Runtime.getRuntime().availableProcessors());
