@@ -15,13 +15,15 @@ public class Employee extends BaseModel{
   private String employeeEmail;
   private  Integer employeeAge;
   private double empSalary;
+  private String gender;
 
-  public Employee(@NonNull Integer Id, Timestamp createdAt, Timestamp updatedAt, boolean deleted, String employeeName, String employeeEmail, Integer employeeAge, double empSalary) {
+  public Employee(@NonNull Integer Id, Timestamp createdAt, Timestamp updatedAt, boolean deleted, String employeeName, String employeeEmail, Integer employeeAge, double empSalary,String gender) {
     super(Id, createdAt, updatedAt, deleted);
     this.employeeName = employeeName;
     this.employeeEmail = employeeEmail;
     this.employeeAge = employeeAge;
     this.empSalary = empSalary;
+    this.gender=gender;
   }
 
   public Employee(@NonNull Integer Id, Timestamp createdAt, Timestamp updatedAt, boolean deleted) {
@@ -60,4 +62,8 @@ public class Employee extends BaseModel{
   public void setEmpSalary(double empSalary) {
     this.empSalary = empSalary;
   }
+
+  public void setGender(String empGender){this.gender=gender;}
+
+  public String getGender(){return gender;}
 }

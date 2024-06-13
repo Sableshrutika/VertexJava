@@ -1,12 +1,10 @@
 package com.example.starter.model.mapper;
 
-import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.List;
 
 //@Data
-public class Response {
+public class Response<P> {
 
   private Object data;
   private String message;

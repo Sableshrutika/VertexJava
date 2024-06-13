@@ -18,6 +18,7 @@ public enum GetEmployeeById implements CommonController{
   Integer employeeId=Integer.valueOf(context.pathParam("employeeId"));
   Optional<Employee>employee= Optional.ofNullable(EmployeRepo.INSTANCE.findById(employeeId));
     Response response=new Response();
+
     if(employee.isPresent()){
       response.setData(employee.get());
       response.setMessage("employeee details featch successfully !!!");

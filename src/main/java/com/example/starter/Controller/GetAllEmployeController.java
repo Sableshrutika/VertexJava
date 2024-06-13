@@ -22,8 +22,8 @@ public enum GetAllEmployeController implements CommonController {
 
   @Override
   public void handle(RoutingContext context) {
-    Response response=new Response();
 
+  com.example.starter.model.mapper.Response response=new com.example.starter.model.mapper.Response();
     try{
     List<Employee> employee= EmployeRepo.INSTANCE.findAll();
     if(employee==null||employee.isEmpty()){

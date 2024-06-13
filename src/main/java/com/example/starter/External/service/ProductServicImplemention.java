@@ -13,7 +13,7 @@ INSTANCE;
   String baseUrl= ConfigHelper.INSTANCE.getExternalConfig()
     .getJsonObject("products").getString("baseUrl");
   HttpLoggingInterceptor httpLogging=new HttpLoggingInterceptor();
-   httpLogging.setLevel(HttpLoggingInterceptor.Level.BASIC);
+  httpLogging.setLevel(HttpLoggingInterceptor.Level.BASIC);
    OkHttpClient client= new OkHttpClient
      .Builder()
      .addInterceptor(httpLogging)

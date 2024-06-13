@@ -22,14 +22,14 @@ public enum AddEmployee implements CommonController {
     Response response=new Response();
     try{
     JsonObject employeeJson= context.getBodyAsJson();
-    logger.info("pring some msg:",employeeJson.encodePrettily());
+    logger.info("print some msg:",employeeJson.encodePrettily());
     Employee employee= employeeJson.mapTo(Employee.class);
     employee.save();
     EmpResponse empResponse= EmployeeMapper.INSTANCE.createEmployeeResponse(employee);
     response.setData(empResponse);
     response.setMessage("employee data succeefully saved!!");
     ResponseUtils.INSTANCE.writeJsonResponse(context,response,"successs");
-  logger.info("employee Response:{}",JsonObject.mapFrom(response).encodePrettily());
+    logger.info("employee Response:{}",JsonObject.mapFrom(response).encodePrettily());
   }
     catch(Exception e){
       response.setErrors(Arrays.asList(e.getMessage()));

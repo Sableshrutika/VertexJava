@@ -60,7 +60,9 @@ INSTANCE;
   }
 
 
-  }
+    public void handleError(RoutingContext context, Throwable error) {
+    }
+}
 
 
 

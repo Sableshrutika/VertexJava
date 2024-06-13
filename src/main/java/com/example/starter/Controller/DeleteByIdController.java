@@ -6,7 +6,6 @@ import com.example.starter.model.repos.EmployeRepo;
 import com.example.starter.utils.ResponseUtils;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import io.vertx.ext.web.RoutingContext;
-import okhttp3.logging.HttpLoggingInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
